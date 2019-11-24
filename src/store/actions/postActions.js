@@ -10,4 +10,19 @@ export const getPosts = () => (dispatch) => {
                 payload: res.data
             }))
 
-    }
+}
+
+export const getOnePost = (id) => async (dispatch) => {
+     
+  try {
+    let res = await axios.get(`${URL}/${id}`);
+
+    return dispatch({
+      type: 'GET_ONE_POST',
+      payload: res.data
+    })
+    
+  } catch (error) {
+     console.log()
+  }
+}

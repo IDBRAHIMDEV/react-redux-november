@@ -13,10 +13,10 @@ class PostList extends Component {
         let { myPosts } = this.props;
         return (
             <Fragment> 
-                <div class="row">
+                <div className="row">
                  {myPosts && myPosts.map(post => (
-                   <div className="col-md-6">
-                       <PostItem key={post.id} post={post}/>
+                   <div key={post.id} className="col-md-6">
+                       <PostItem post={post}/>
                    </div>    
                  )) }
                 </div>

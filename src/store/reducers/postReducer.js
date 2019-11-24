@@ -11,6 +11,11 @@ export default (state = initState, action) => {
                 ...state,
                 posts: action.payload
             }
+        case 'GET_ONE_POST':
+            return {
+                ...state,
+                posts: [action.payload]
+            }
         default:
             return state
     }
