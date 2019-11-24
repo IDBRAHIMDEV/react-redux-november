@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "learn Adonis JS ",
+      "body": "LEARN How to create web app with nodejs",
+      "id": 1
+    },
+    {
+      "title": "Formation Angular 8",
+      "body": "Learn angular",
+      "id": 2
+    }
+  ]
+}

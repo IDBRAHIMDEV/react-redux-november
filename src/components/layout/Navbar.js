@@ -10,6 +10,10 @@ class Navbar extends Component {
                         <Link className="nav-item nav-link active" to="/">
                             Home <span className="sr-only">(current)</span>
                         </Link>
+
+                        <Link className="nav-item nav-link active" to="/post/create">
+                            New Post 
+                        </Link>
                        
                     </div>
                 </nav>

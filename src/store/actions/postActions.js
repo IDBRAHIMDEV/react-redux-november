@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://jsonplaceholder.typicode.com/posts';
+const URL = 'http://localhost:5000/posts';
 
 export const getPosts = () => (dispatch) => {
          console.log('get posts');
@@ -26,3 +26,15 @@ export const getOnePost = (id) => async (dispatch) => {
      console.log()
   }
 }
+
+export const addPost = (post) => (dispatch) => {
+
+    axios.post(URL, post)
+         .then(res => {
+           return dispatch({
+             type: 'ADD_POST',
+             payload: res.data
+           })
+         })
+         .catch(err => console.error(err))
+} 

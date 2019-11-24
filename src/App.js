@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PostList from './components/posts/PostList';
 import PostDetail from './components/posts/PostDetail';
+import PostAdd from './components/posts/PostAdd';
 import Info from './components/layout/Info';
 import PageNotFound from './components/layout/PageNotFound';
 
@@ -21,6 +22,7 @@ function App() {
             
             <Switch>
               <Route path='/' component={PostList} exact />
+              <Route path='/post/create' component={PostAdd} exact />
               <Route path='/post/:id' component={PostDetail} exact />
               <Route component={PageNotFound} />
             </Switch>
